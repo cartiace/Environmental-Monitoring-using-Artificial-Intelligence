@@ -58,22 +58,11 @@ with tab1:
 with tab2:
     st.header("🌲 Deforestation Prediction Models Overview")
 
-    model_data = {
-        "Model": ["2D CNN", "3D CNN"],
-        "Accuracy": ["91.4%", "94.2%"],
-        "F1 Score": ["0.88", "0.91"],
-        "IoU": ["0.81", "0.85"]
-    }
+    model_data = main.csv
     st.table(pd.DataFrame(model_data))
 
     st.subheader("📍 Regional Evaluation (2019–2020)")
-    full_data = {
-        "Train Region": ["Kullu", "Kinnaur", "Shimla", "Hamirpur", "Kangra"],
-        "2019 AUC": [0.990, 0.879, 0.997, 0.984, 0.806],
-        "2019 F1": [0.903, 0.663, 0.904, 0.865, 0.532],
-        "2020 AUC": [0.839, 0.861, 0.849, 0.876, 0.803],
-        "2020 F1": [0.580, 0.593, 0.589, 0.623, 0.527]
-    }
+    full_data = main2.csv
     st.dataframe(pd.DataFrame(full_data))
 
     st.markdown("---")
